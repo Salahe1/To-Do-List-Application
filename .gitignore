@@ -1,0 +1,65 @@
+# Visual Studio
+.vs/
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Bb]in/
+[Oo]bj/
+
+# ASP.NET Core
+project.lock.json
+project.fragment.lock.json
+*.db
+*.db-journal
+*.pdb
+*.mdb
+*.log
+*.dSYM/
+*.pdb
+*.cache
+*.vs/
+
+# Rider
+.idea/
+*.sln.iml
+
+# Visual Studio Code
+.vscode/
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.tlog
+*.tbd
+
+# User-specific files
+*.userprefs
+*.sln.docstates
+
+# Secrets
+appsettings.Development.json
+appsettings.json
+appsettings.*.json
+
+# Other files to ignore
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

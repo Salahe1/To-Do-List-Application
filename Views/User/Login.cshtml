@@ -1,0 +1,40 @@
+﻿@model userVm;
+
+
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <div class="card">
+
+                <div class="card-header text-center">
+                    <h2>Se connecter</h2>
+                </div>
+
+                <div class="card-body">
+                    <form method="post" action="../User/Login">
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="login">Login</label>
+                            <input class="form-control" type="text" asp-for="login" placeholder="Entrez votre login" />
+                            <span class="text-danger" asp-validation-for="login"></span>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label class="form-label" for="password">Password</label>
+                            <input class="form-control" type="password" asp-for="password" placeholder="Entrez votre mot de passe" />
+                            <span class="text-danger" asp-validation-for="password"></span>
+                        </div>
+
+                        <button class="btn btn-primary w-100 mt-4">Se connecter</button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

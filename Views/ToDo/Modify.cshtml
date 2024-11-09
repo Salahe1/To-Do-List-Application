@@ -1,0 +1,56 @@
+﻿@model todoVM
+
+
+
+
+<div class="card">
+
+    <div class="card-header text-center">
+        <h2>Modify To-Do Item</h2>
+    </div>
+
+
+    <div class="card-body">
+        <form method="post" action="../ToDo/Modify">
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group">
+                <label asp-for="Libelle" class="control-label"></label>
+                <input asp-for="Libelle" class="form-control" />
+                <span asp-validation-for="Libelle" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+                @* //  <input class="form-control" type="text" asp-for="Description" />*@
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <div class="form-label"> State </div>
+                <select class="form-control" asp-for="State" asp-items="Html.GetEnumSelectList<ToDoList.ViewModel.todoVM.TodoState>()">
+                    <option selected="" value="">Please select a state</option>
+                </select>
+                <span class="text-danger" asp-validation-for="State"></span>
+            </div>
+
+
+            <div class="from-group ">
+                <label asp-for="DateLimite" class="control-label"></label>
+                <input asp-for="DateLimite" type="date" class="form-control" />
+                <span asp-validation-for="DateLimite" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-outline-primary mt-2 ">Update</button>
+
+        </form>
+    </div>
+
+    <div class="card-footer">
+        <form asp-controller="ToDo" asp-action="Index">
+            <button class="btn  btn-outline-secondary">Go Back To the List</button>
+        </form>
+    </div>
+</div>

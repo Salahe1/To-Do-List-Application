@@ -1,0 +1,50 @@
+﻿/* Dark theme overrides */
+.dark-theme {
+    background-color: #121212 !important; /* Sets a dark background */
+    color: white !important; /* Sets the text color to white */
+}
+
+    .dark-theme .navbar, .dark-theme .footer, .dark-theme .card {
+        background-color: #1f1f1f !important; /* Dark background for specific elements */
+        color:white !important;
+    }
+    .dark-theme .navbar-brand {
+        background-color: #1f1f1f !important; /* Dark background for specific elements */
+        color: white !important;
+    }
+
+    .dark-theme .table, .dark-theme .table th, .dark-theme .table td {
+        color: white !important; /* Ensures all table text is white */
+        background-color: #1f1f1f !important; /* Adjusts the table background */
+    }
+
+    .dark-theme .text-dark, .dark-theme .bg-light, .dark-theme .btn-light {
+        color: white !important; /* Changes any dark text to white */
+        background-color: #333 !important; /* Changes light background elements to dark */
+    }
+
+.navbar-custom {
+    background-color: #ffffff; /* Light background for the navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Adds shadow to footer */
+}
+
+.container {
+    max-width: 1200px; /* Limits the max width */
+    margin: auto; /* Centers the container */
+}
+
+.btn-switch-theme {
+    margin-left: auto; /* Aligns button to the right in the navbar */
+}
+
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+}

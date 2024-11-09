@@ -1,0 +1,57 @@
+﻿@model todoVM;
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+
+        <div class="card">
+
+            <div class="card-header text-center">
+                <h2>Add a ToDo </h2>
+            </div>
+
+            <div class="card-body ">
+
+                <form method="post" action="../ToDo/Add">
+                   
+                    <div class="form-group">
+                        <div class="form-label" >label </div>
+                        <input class="form-control" asp-for="Libelle" type="text" />
+                        <span class="text-danger" asp-validation-for="Libelle"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-label" >Description</div>
+                        <textarea class="form-control" asp-for="Description" ></textarea>
+                        <span class="text-danger" asp-validation-for="Description"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-label"> State </div>
+                        <select class="form-control" asp-for="State" asp-items="Html.GetEnumSelectList<ToDoList.ViewModel.todoVM.TodoState>()">
+                            <option selected="selected" value="">Please select a state</option>
+                        </select>
+                        <span class="text-danger" asp-validation-for="State"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-label"> Date Limite </div>
+                        <input class="form-control" asp-for="DateLimite" type="date" />
+                        <span class="text-danger" asp-validation-for="DateLimite"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary  mt-3">Add</button>
+
+            
+                </form>
+            </div>
+            
+            <div class="card-footer">
+                <form asp-controller="ToDo" asp-action="Index">
+                    <button class="btn btn-info">Go To the List</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
